@@ -255,21 +255,30 @@
 - (NSArray*) buildProperties:(Class)_class forceRebuild:(BOOL)force
 {
     if (force || self.attributes.count == 0) {
-        unsigned int propertyCount = 0;
-        objc_property_t * properties = class_copyPropertyList(_class, &propertyCount);
-        
-        for (unsigned int i = 0; i < propertyCount; ++i) {
-            objc_property_t property = properties[i];
-            const char * name = property_getName(property);
-            const char * attr = property_getAttributes(property);
-            NSString *tmp = [NSString stringWithUTF8String:attr];
-            NSString *tmpName = [NSString stringWithUTF8String:name];
-            if (![self isExcluded:tmpName]) {
-                AttributeMetadata *meta = [[AttributeMetadata alloc] initWithName:tmpName type:[self extractType:tmp]];
-                [self.attributes addObject:meta];
+        Class superClass = _class;
+        while (true) {
+            unsigned int propertyCount = 0;
+            objc_property_t * properties = class_copyPropertyList(superClass, &propertyCount);
+            
+            for (unsigned int i = 0; i < propertyCount; ++i) {
+                objc_property_t property = properties[i];
+                const char * name = property_getName(property);
+                const char * attr = property_getAttributes(property);
+                NSString *tmp = [NSString stringWithUTF8String:attr];
+                NSString *tmpName = [NSString stringWithUTF8String:name];
+                if (![self isExcluded:tmpName]) {
+                    AttributeMetadata *meta = [[AttributeMetadata alloc] initWithName:tmpName type:[self extractType:tmp]];
+                    [self.attributes addObject:meta];
+                }
+            }
+            free(properties);
+            
+            superClass = [superClass superclass];
+            if ([superClass superclass] == nil) {
+                // it's NSObject, no more superclass
+                break;
             }
         }
-        free(properties);
     }
     return self.attributes;
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87217C8B1DE7E35100B6A8B8 /* DBFiledata.m in Sources */ = {isa = PBXBuildFile; fileRef = 87217C8A1DE7E35100B6A8B8 /* DBFiledata.m */; };
 		87A7BACD1D40C382003397E2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A7BACC1D40C382003397E2 /* main.m */; };
 		87A7BAD01D40C382003397E2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A7BACF1D40C382003397E2 /* AppDelegate.m */; };
 		87A7BAD31D40C382003397E2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A7BAD21D40C382003397E2 /* ViewController.m */; };
@@ -29,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		87217C891DE7E35100B6A8B8 /* DBFiledata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBFiledata.h; sourceTree = "<group>"; };
+		87217C8A1DE7E35100B6A8B8 /* DBFiledata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBFiledata.m; sourceTree = "<group>"; };
 		87A7BAC81D40C382003397E2 /* SimpleJSONMapping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleJSONMapping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A7BACC1D40C382003397E2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		87A7BACE1D40C382003397E2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -99,6 +102,8 @@
 				87A7BAD91D40C382003397E2 /* LaunchScreen.storyboard */,
 				87A7BADC1D40C382003397E2 /* Info.plist */,
 				87A7BACB1D40C382003397E2 /* Supporting Files */,
+				87217C891DE7E35100B6A8B8 /* DBFiledata.h */,
+				87217C8A1DE7E35100B6A8B8 /* DBFiledata.m */,
 			);
 			path = SimpleJSONMapping;
 			sourceTree = "<group>";
@@ -230,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87A7BAF61D40C3E8003397E2 /* DBMetadata.m in Sources */,
+				87217C8B1DE7E35100B6A8B8 /* DBFiledata.m in Sources */,
 				87A7BAD31D40C382003397E2 /* ViewController.m in Sources */,
 				87A7BAD01D40C382003397E2 /* AppDelegate.m in Sources */,
 				87A7BACD1D40C382003397E2 /* main.m in Sources */,
@@ -422,6 +428,7 @@
 				87A7BAEC1D40C382003397E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		87A7BAED1D40C382003397E2 /* Build configuration list for PBXNativeTarget "SimpleJSONMappingTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +437,7 @@
 				87A7BAEF1D40C382003397E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
