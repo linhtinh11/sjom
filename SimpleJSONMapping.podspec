@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SimpleJSONMapping'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'simple way to map json to object and viceversa'
 
   s.homepage         = 'https://github.com/linhtinh11/sjom'
