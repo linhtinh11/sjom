@@ -17,6 +17,9 @@
 		87A7BAE61D40C382003397E2 /* SimpleJSONMappingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A7BAE51D40C382003397E2 /* SimpleJSONMappingTests.m */; };
 		87A7BAF31D40C3A2003397E2 /* SimpleJSONObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A7BAF21D40C3A2003397E2 /* SimpleJSONObjectMapping.m */; };
 		87A7BAF61D40C3E8003397E2 /* DBMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A7BAF51D40C3E8003397E2 /* DBMetadata.m */; };
+		87FB4F3C1FA7F52700C6F0AA /* SJOMFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 87FB4F3A1FA7F52700C6F0AA /* SJOMFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87FB4F461FA7F5C700C6F0AA /* SimpleJSONObjectMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 87A7BAF11D40C3A2003397E2 /* SimpleJSONObjectMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87FB4F471FA7F61000C6F0AA /* SimpleJSONObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A7BAF21D40C3A2003397E2 /* SimpleJSONObjectMapping.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		87A7BAF21D40C3A2003397E2 /* SimpleJSONObjectMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleJSONObjectMapping.m; sourceTree = "<group>"; };
 		87A7BAF41D40C3E8003397E2 /* DBMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBMetadata.h; sourceTree = "<group>"; };
 		87A7BAF51D40C3E8003397E2 /* DBMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBMetadata.m; sourceTree = "<group>"; };
+		87FB4F381FA7F52700C6F0AA /* SJOMFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SJOMFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87FB4F3A1FA7F52700C6F0AA /* SJOMFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJOMFramework.h; sourceTree = "<group>"; };
+		87FB4F3B1FA7F52700C6F0AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		87FB4F341FA7F52700C6F0AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -74,6 +87,7 @@
 			children = (
 				87A7BACA1D40C382003397E2 /* SimpleJSONMapping */,
 				87A7BAE41D40C382003397E2 /* SimpleJSONMappingTests */,
+				87FB4F391FA7F52700C6F0AA /* SJOMFramework */,
 				87A7BAC91D40C382003397E2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -83,6 +97,7 @@
 			children = (
 				87A7BAC81D40C382003397E2 /* SimpleJSONMapping.app */,
 				87A7BAE11D40C382003397E2 /* SimpleJSONMappingTests.xctest */,
+				87FB4F381FA7F52700C6F0AA /* SJOMFramework.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,7 +149,28 @@
 			path = SimpleJSONMapping;
 			sourceTree = "<group>";
 		};
+		87FB4F391FA7F52700C6F0AA /* SJOMFramework */ = {
+			isa = PBXGroup;
+			children = (
+				87FB4F3A1FA7F52700C6F0AA /* SJOMFramework.h */,
+				87FB4F3B1FA7F52700C6F0AA /* Info.plist */,
+			);
+			path = SJOMFramework;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		87FB4F351FA7F52700C6F0AA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87FB4F461FA7F5C700C6F0AA /* SimpleJSONObjectMapping.h in Headers */,
+				87FB4F3C1FA7F52700C6F0AA /* SJOMFramework.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		87A7BAC71D40C382003397E2 /* SimpleJSONMapping */ = {
@@ -172,6 +208,24 @@
 			productReference = 87A7BAE11D40C382003397E2 /* SimpleJSONMappingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		87FB4F371FA7F52700C6F0AA /* SJOMFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87FB4F431FA7F52700C6F0AA /* Build configuration list for PBXNativeTarget "SJOMFramework" */;
+			buildPhases = (
+				87FB4F331FA7F52700C6F0AA /* Sources */,
+				87FB4F341FA7F52700C6F0AA /* Frameworks */,
+				87FB4F351FA7F52700C6F0AA /* Headers */,
+				87FB4F361FA7F52700C6F0AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SJOMFramework;
+			productName = SJOMFramework;
+			productReference = 87FB4F381FA7F52700C6F0AA /* SJOMFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -187,6 +241,10 @@
 					87A7BAE01D40C382003397E2 = {
 						CreatedOnToolsVersion = 7.3.1;
 						TestTargetID = 87A7BAC71D40C382003397E2;
+					};
+					87FB4F371FA7F52700C6F0AA = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -205,6 +263,7 @@
 			targets = (
 				87A7BAC71D40C382003397E2 /* SimpleJSONMapping */,
 				87A7BAE01D40C382003397E2 /* SimpleJSONMappingTests */,
+				87FB4F371FA7F52700C6F0AA /* SJOMFramework */,
 			);
 		};
 /* End PBXProject section */
@@ -221,6 +280,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		87A7BADF1D40C382003397E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87FB4F361FA7F52700C6F0AA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -248,6 +314,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				87A7BAE61D40C382003397E2 /* SimpleJSONMappingTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87FB4F331FA7F52700C6F0AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87FB4F471FA7F61000C6F0AA /* SimpleJSONObjectMapping.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +441,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SimpleJSONMapping/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vn.nws.SimpleJSONMapping;
@@ -378,6 +453,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SimpleJSONMapping/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vn.nws.SimpleJSONMapping;
@@ -409,6 +485,78 @@
 			};
 			name = Release;
 		};
+		87FB4F411FA7F52700C6F0AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = SJOMFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vn.nws.SJOMFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		87FB4F421FA7F52700C6F0AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = SJOMFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vn.nws.SJOMFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -435,6 +583,15 @@
 			buildConfigurations = (
 				87A7BAEE1D40C382003397E2 /* Debug */,
 				87A7BAEF1D40C382003397E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87FB4F431FA7F52700C6F0AA /* Build configuration list for PBXNativeTarget "SJOMFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87FB4F411FA7F52700C6F0AA /* Debug */,
+				87FB4F421FA7F52700C6F0AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
